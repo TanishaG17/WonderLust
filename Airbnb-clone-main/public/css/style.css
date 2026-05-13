@@ -125,3 +125,71 @@ listing-card{
     padding-left: 0;
     padding-right: 0;
 }
+
+
+/* ===== RESPONSIVE - MOBILE & TABLET ===== */
+
+/* Filters row - wrap on small screens */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+/* Cards grid - responsive columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 576px) {
+    .col-md-3 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .navbar {
+        height: auto !important;
+        padding: 0.5rem 1rem;
+    }
+
+    .show-img {
+        height: 40vh;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .f-info {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet - 2 cards per row */
+@media (min-width: 577px) and (max-width: 992px) {
+    .col-md-3 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .show-img {
+        height: 35vh;
+    }
+}
+
+/* Laptop and above - 4 cards per row (default) */
+@media (min-width: 993px) {
+    .col-md-3 {
+        width: 25% !important;
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+}
